@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="${#request.getContextPath()}+'/'">
+    <meta charset="UTF-8">
+    <title>管理员注册</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.css}">
+</head>
+<body>
+    <div>
+        <form action="/admin/doRegister" id="myForm" method="post">
+
+            用户名：<input type="text" class="form-control" name="username" id="username" placeholder="用户名"><br>
+            昵 称：<input type="text" class="form-control" name="name" id="name" placeholder="昵称"><br>
+            密 码：<input type="password" class="form-control" name="password" id="password" placeholder="密码"><br>
+
+            <input type="submit" value="注册" class="btn btn-sm btn-danger">
+
+        </form>
+    </div>
+    <!-- JavaScript files-->
+    <script th:src="@{plugins/jQuery/jquery-2.2.3.min.js}"></script>
+    <script th:src="@{plugins/jQueryvalidate/jquery.validate.js}"></script>
+    <script th:src="@{plugins/jQueryvalidate/messages_zh.js}"></script>
+    <script>
+        $().ready(function() {
+            $("#myForm").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 2,
+                        maxlength: 6,
+                    },
+                    name: {
+                        required: true,
+                        minlength: 2,
+                        maxlength: 8,
+                    },
+                    password: {
+                        required: true,
+                        minlength: 6,
+                        maxlength: 12,
+                    }
+                },
+                messages: {
+                    username: {
+                        required: "请输入用户名",
+                        minlength: "用户名的长度不能小于2位",
+                        maxlength: "用户名的长度不能大于6位",
+                    },
+                    name: {
+                        required: "请输入昵称",
+                        minlength: "昵称的长度不能小于2位",
+                        maxlength: "昵称的长度不能大于8位",
+                    },
+                    password: {
+                        required: "请输入密码",
+                        minlength: "密码的长度不能小于6位",
+                        maxlength: "密码的长度不能超过12位",
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="${#request.getContextPath()}+'/'">
+    <meta charset="UTF-8">
+    <title>管理员登录</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.css}">
+</head>
+<body>
+<div>
+    <form action="/admin/doLogin" method="post" id="myForm">
+
+        用户名：<input type="text" class="form-control" name="username" id="username" placeholder="用户名"><br>
+        密 码：<input type="password" class="form-control" name="password" id="password" placeholder="密码"><br>
+
+        <input type="submit" value="登录" class="btn btn-sm btn-info">
+
+    </form>
+</div>
+</body>
+</html>

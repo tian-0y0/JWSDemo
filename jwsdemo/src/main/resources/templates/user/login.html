@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="${#request.getContextPath()}+'/'">
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.css}">
+</head>
+<body>
+<form action="/user/doLogin" method="post" id="myForm">
+    邮 箱：<input type="text" name="email" id="email" class="form-control">
+    密 码：<input type="password" name="password" id="password" class="form-control">
+    <input type="submit" class="btn btn-info btn-sm" value="登录">
+</form>
+</body>
+</html>

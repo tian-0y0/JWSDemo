@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.css}">
+</head>
+<body>
+<div>
+    <form action="/user/doRegister" id="myForm" method="post">
+
+        邮 箱：<input type="text" class="form-control" name="email" id="email" placeholder="邮箱"><br>
+        手机号：<input type="text" class="form-control" name="phone" id="phone" placeholder="手机号"><br>
+        昵 称：<input type="text" class="form-control" name="name" id="name" placeholder="昵称"><br>
+        密 码：<input type="password" class="form-control" name="password" id="password" placeholder="密码"><br>
+
+        <input type="submit" value="注册" class="btn btn-sm btn-info">
+
+    </form>
+</div>
+<!-- JavaScript files-->
+<script th:src="@{plugins/jQuery/jquery-2.2.3.min.js}"></script>
+<script th:src="@{plugins/jQueryvalidate/jquery.validate.js}"></script>
+<script th:src="@{plugins/jQueryvalidate/messages_zh.js}"></script>
+</body>
+</html>

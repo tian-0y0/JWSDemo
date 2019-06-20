@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password:
+    url: jdbc:mysql://127.0.0.1:3306/demo?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .html
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+  devtools:
+    livereload:
+      enabled: true   #是否支持livereload
+      port: 35729
+    restart:
+      enabled: true #是否支持热部署
+
+
+
+server:
+  port: 8880
+  servlet:
+    session:
+      timeout: PT5S
