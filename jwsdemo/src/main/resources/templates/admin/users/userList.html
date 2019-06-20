@@ -21,10 +21,19 @@
                 <td><span th:text="${user.phone}"></span></td>
                 <td><span th:text="${user.email}"></span></td>
                 <td>
-                    <a th:href="@{/admin/userDetail/{id}(id=${user.id})}">详情</a> | <a href="">删除</a>
+                    <a th:href="@{/admin/userDetail/{id}(id=${user.id})}">详情</a> | <a th:href="@{/admin/deleteUser/{id}(id=${user.id})}" onclick="return del();">删除</a>
                 </td>
             </tr>
         </table>
     </div>
+    <script type="text/javascript">
+        function del() {
+            if(confirm('确认要删除？'))
+            {
+                return true;
+            }
+            return false;
+        }
+    </script>
 </body>
 </html>

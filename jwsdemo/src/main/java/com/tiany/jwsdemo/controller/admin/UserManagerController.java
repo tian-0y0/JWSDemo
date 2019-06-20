@@ -1,6 +1,7 @@
 package com.tiany.jwsdemo.controller.admin;
 
 import com.tiany.jwsdemo.entity.User;
+import com.tiany.jwsdemo.entity.UserExample;
 import com.tiany.jwsdemo.service.AdminService;
 import com.tiany.jwsdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,13 @@ public class UserManagerController {
         User user = userService.userDetail(id);
         model.addAttribute("user",user);
         return "admin/users/userDetail";
+    }
+
+    @GetMapping("deleteUser/{id}")
+    public String deleteUser(@PathVariable("id") int id)
+    {
+        userService.deleteUser(id);
+        return "redirect:/admin/userList";
     }
 
 

@@ -15,4 +15,6 @@ public interface UserService {
 
     User userDetail(int id);
 
+    int deleteUser(int id);
+
 }

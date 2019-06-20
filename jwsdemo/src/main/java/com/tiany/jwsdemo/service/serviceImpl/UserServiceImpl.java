@@ -98,4 +98,12 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
+    @Override
+    public int deleteUser(int id) {
+        int count = 0;
+        count = userMapper.logicalDeleteByPrimaryKey(id);
+        return count;
+    }
+
+
 }
