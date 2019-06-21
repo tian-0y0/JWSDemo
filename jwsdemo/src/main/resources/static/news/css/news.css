@@ -1,0 +1,253 @@
+/*navbar-bg {
+	border-color: #e7e7e7;
+	background-color: #21292c;
+}*/
+
+.navbar-bg .navbar-nav>li>a {
+	color: #555;
+	font-size: 16px;
+}
+
+.navbar-bg .navbar-nav>li>a:hover,
+.navbar-bg .navbar-nav>li>a:focus {
+	color: #e94a37;
+	background-color: transparent;
+}
+
+.index-bg {
+	background: url(../img/000.png) no-repeat center 40px;
+	background-size: cover;
+}
+
+.mag {
+	margin-top: 50%;
+}
+
+.game-downlode {
+	width: 368px;
+	height: 168px;
+	background: url(../img/down_off.png);
+	background-size: cover;
+}
+
+.game-downlode:hover,
+.game-downlode:focus {
+	width: 368px;
+	height: 168px;
+	background: url(../img/down_on.png);
+	background-size: cover;
+}
+
+.left-game-reg {
+	width: 182px;
+	height: 90px;
+	background: url(../img/register_off.jpg);
+	background-size: cover;
+}
+.left-game-reg:hover,
+.left-game-reg:focus{
+	width: 182px;
+	height: 90px;
+	background: url(../img/register_on.png);
+	background-size: cover;
+}
+.right-game-reg {
+	width: 182px;
+	height: 90px;
+	background: url(../img/charge_off.jpg);
+	background-size: cover;
+}
+.right-game-reg:hover,
+.right-game-reg:focus{
+	width: 182px;
+	height: 90px;
+	background: url(../img/charge_on.png);
+	background-size: cover;
+}
+.row .col-s-6 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 0px;
+	padding-left: 1.5%;
+	float: left;
+	width: 50%;
+}
+
+.container-m {
+	width: 1170px;
+	margin: auto 0px;
+}
+
+.title-bg {
+	background: url(../img/detail_tit.png);
+	background-size: 100%;
+	height: 73px;
+}
+
+.ht {
+	color: #FFFFFF;
+}
+
+.ht-pd {
+	padding-top: 18px;
+}
+
+.ht a {
+	color: #FFFFFF;
+}
+
+.mag-t {
+	margin-top: 10px;
+}
+
+.bg-white {
+	background-color: #FFFFFF;
+}
+
+.navbar-nav>li>a {
+	color: #000;
+	font-size: 16px;
+}
+
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus {
+	color: #2c8ba3;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+.navbar-nav .active span {
+	margin-bottom: -9px;
+	height: 10px;
+	display: block;
+	background: url(../img/arr_down.png) center bottom no-repeat;
+}
+
+.collapse-b {
+	border-bottom: 1px solid #BFDBE3;
+}
+
+.text-li {
+	height: 80px;
+	line-height: 80px;
+	border-bottom: #dadada dotted 1px;
+	font-size: 18px;
+	overflow: hidden;
+}
+
+.time {
+	float: right;
+	margin-right: 5%;
+}
+
+.height-light {
+	color: #2C8BA3;
+	float: left
+}
+
+.text-li span {
+	margin-top: 0.07813rem;
+	float: left;
+	margin: 38px 9px 0 0;
+	display: block;
+	width: 8px;
+	height: 8px;
+	background: url(../img/lin.png);
+	background-size: auto;
+	background-size: cover;
+}
+
+.text-li a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.col-sm-7 a img {
+	margin-top: 2%;
+}
+
+#con_one_3 ul {
+	padding-left: 2%;
+}
+
+.col-sm-5-h4 a {
+	color: #000000;
+}
+
+.col-sm-5-time {
+	margin: 0;
+	padding: 5px 0px 8px 0px;
+	color: #00607A;
+	line-height: 15px;
+}
+
+.act-mag {
+	margin-top: 3%;
+}
+
+.col-sm-5-text {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	height: 180px;
+	color: #777;
+	line-height: 24px;
+	margin-right: 3.5%;
+	font-size: 14px;
+}
+
+.act-ul-li {
+	overflow: hidden;
+	/*padding: 0.13021rem 0 0.07292rem;*/
+	width: 100%;
+	border-bottom: #dadada dotted 1px;
+}
+
+/**
+ * footer部分
+ */
+#footer {
+ background-color: #222;
+    color: #555;
+    font-size: 12px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+ 	height: 209.64px; 
+ 	margin-top: 200px;
+}
+.co {
+ width: 900px;
+ height: 202.64px;
+ margin: 0 auto;
+ overflow: hidden;
+ text-align: left;
+} 
+#footer p,#footer span {
+ color: #555555;
+ padding: 0 0 0 15px;
+ line-height: 20px;
+}
+.f01 span a {
+ color: #555555;
+ text-decoration: none;
+}
+.f01 span a:hover {
+ color: #CCCCCC;
+}
+.f02,.f03,.f04,.f05,.f06 {
+ font-size: 9px;
+ padding: 0;
+ margin: 0;
+}
+.f06,.f06 img {
+ float: left;
+ margin-top: 5px;
+}
+.f06 span {
+ display: block;
+ width: 850px;
+ margin-top: 3px;
+}

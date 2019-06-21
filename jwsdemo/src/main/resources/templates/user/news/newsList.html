@@ -1,10 +1,404 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <base th:href="${#request.getContextPath()}+'/'">
+    <meta charset="utf-8" />
+    <title>剑网三新闻</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/news/css/bootstrap.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/news/css/news.css}" />
 </head>
-<body>
+
+<body class="index-bg">
+<div class="container">
+    <nav class="navbar navbar-bg">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="" href="#">
+                    <img th:src="@{/news/img/loga.png}" width="138px" height="38px" />
+                </a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">登陆</a>
+                </li>
+                <li>
+                    <a href="#">注册账号</a>
+                </li>
+                <li>
+                    <a href="#">账号充值</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">服务列表 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Action</a>
+                        </li>
+                        <li>
+                            <a href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a href="#">Something else here</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <a href="#">Separated link</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">游戏列表 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Action</a>
+                        </li>
+                        <li>
+                            <a href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a href="#">Something else here</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <a href="#">Separated link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+</div>
+<div class="container">
+
+    <div class="row mag">
+        <!--left start-->
+        <div class="col-sm-4">
+            <a href="#">
+                <div class="game-downlode"></div>
+            </a>
+            <div class="row">
+                <div class="col-sm-6 mag-t">
+                    <a href="#">
+                        <div class="left-game-reg"></div>
+                    </a>
+                </div>
+                <div class="col-s-6 mag-t">
+                    <a href="#">
+                        <div class="right-game-reg">
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="mag-t">
+                <a href="#"><img th:src="@{/news/img/left1.jpg}" width="368px" height="228px" /></a>
+
+            </div>
+            <div class="mag-t">
+                <a href="#"><img th:src="@{/news/img/left2.jpg}" width="368px" height="228px" /></a>
+            </div>
+            <div class="mag-t">
+                <a href="#"><img th:src="@{/news/img/left3.png}" width="368px" height="376px" /></a>
+            </div>
+        </div>
+        <!--left over-->
+        <!--right start-->
+        <div class="col-sm-8">
+            <!--title-bg start-->
+            <div class="title-bg">
+                <div class="col-sm-8">
+                    <h3 class="ht">新闻资讯</h3>
+                </div>
+                <div class="col-sm-4">
+                    <h6 class="ht ht-pd">您的位置：
+                        <a href="#">官网首页</a> >
+                        <a href="#">最新咨询</a>
+                    </h6>
+                </div>
+            </div>
+            <!--title-bg over-->
+            <!--text start-->
+            <div class="text-whole bg-white">
+                <!--text top strat-->
+                <nav class="navbar bg-white">
+                    <div class="container-fluid" id="tab1">
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse collapse-b" id="myTabs">
+                            <ul class="nav navbar-nav">
+                                <li class="active" id="one1" onclick="setTab('one',1)">
+                                    <a href="#">最新 <span class="sr-only">(current)</span></a>
+                                    <span></span>
+                                </li>
+                                <li id="one2" onclick="setTab('one',2)">
+                                    <a href="#">新闻</a>
+                                    <span></span>
+                                </li>
+                                <li id="one3" onclick="setTab('one',3)">
+                                    <a href="#">活动</a>
+                                    <span></span>
+                                </li>
+                                <li id="one4" onclick="setTab('one',4)">
+                                    <a href="#">公告</a>
+                                    <span></span>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+
+                <!--text top over-->
+
+                <div class="text">
+                    <!--newest start-->
+                    <div id="con_one_1">
+                        <ul th:each="news:${newsList}">
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    <div>
+                                        <span th:text="${news.title}"></span>
+                                    </div>
+
+<!--                                    游戏原画教科书 《剑网3》百页书第二部公布-->
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--newest over-->
+
+                    <!--news start-->
+                    <div id="con_one_2" style="display:none;">
+                        <ul>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                            <li class="text-li">
+                                <span></span>
+                                <a href="#">
+                                    <div class="height-light">
+                                        【官方新闻】
+                                    </div>
+                                    游戏原画教科书 《剑网3》百页书第二部公布
+                                </a>
+                                <em class="time">06/12</em>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!--news over-->
+                    <!--active start-->
+                    <div id="con_one_3" style="display:none;">
+                        <ul>
+                            <li class="act-ul-li">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <a href="#"><img th:src="@{/news/img/active1.jpg}" width="430px" height="200px" /></a>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <h4 class="col-sm-5-h4">
+                                            <a href="#">第三季捐书换点卡活动开启</a>
+                                        </h4>
+                                        <p class="col-sm-5-time">06/11</p>
+                                        <p class="col-sm-5-text">《剑网3》毕业季公益又双叒叕来啦！捐书换点卡活动第三季“寄愿传书 志托鸿鹄”6月11日正式开启！寄一本好书传一份祝福，爱心跋涉千里，江湖与你同行。参与有爱捐书，还将获得剑网3推栏专属爱心勋章及价值60元的游戏点卡！</p>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="act-ul-li">
+                                <div class="row act-mag">
+                                    <div class="col-sm-7">
+                                        <a href="#"><img th:src="@{/news/img/active1.jpg}" width="430px" height="200px" /></a>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <h4 class="col-sm-5-h4">
+                                            <a href="#">第三季捐书换点卡活动开启</a>
+                                        </h4>
+                                        <p class="col-sm-5-time">06/11</p>
+                                        <p class="col-sm-5-text">《剑网3》毕业季公益又双叒叕来啦！捐书换点卡活动第三季“寄愿传书 志托鸿鹄”6月11日正式开启！寄一本好书传一份祝福，爱心跋涉千里，江湖与你同行。参与有爱捐书，还将获得剑网3推栏专属爱心勋章及价值60元的游戏点卡！</p>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!--active over-->
+
+                    <div id="con_one_4" style="display:none;">我的网站我做主</div>
+                </div>
+            </div>
+            <!--text-whole over-->
+        </div>
+        <!--right over-->
+    </div>
+
+
+</div>
+<!-- footer部分 -->
+<footer id="footer">
+    <div class="container co">
+        <p class="f01">
+            <img th:src="@{/news/img/index.png}"/>
+            <img th:src="@{/news/img/index1.png}" />
+            <span>
+      <a href=" ">关于我们</a> |
+      <a href="#">服务协议</a> |
+      <a href="#">客服中心</a> |
+      <a href="#">联系我们</a> |
+      <a href="#">诚聘英才</a>
+     </span>
+        </p>
+        <p class="f02">
+            Copyright 1999-2019 成都西山居世游科技有限公司 版权所有
+        </p>
+        <p class="f03">
+            增值电信业务经营许可证 川B2-20130104 蜀ICP备14009198号-2 川公网安备 51019002000850号 文网游备字[2017] C-RPG 0031 号
+            <img th:src="@{/news/img/index5.png}" />
+        </p>
+        <p class="f04">
+            网络文化经营许可证 川网文[2018]9435-346号 互联网出版许可证 新出网证
+            <川>字027号
+        </p>
+        <p class="f05">
+            信息系统安全等级保护备案证书编号：51010013010 《网络游戏管理暂行办法》第九条内容 中华人民共和国网络安全法
+        </p>
+
+        <p class="f06">
+            <img th:src="@{news/img/index3.png}" />
+            <img th:src="@{news/img/index4.png}" />
+            <span>婉拒18岁以下未成年用户进入游戏 健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身
+      <br />合理安排时间 享受健康生活 进入：未成年人家长监护系统 <i style="color: #cc0e2b;font-size: 10px;">违法和不良信息举报中心</i></span>
+        </p>
+    </div>
+</footer>
 
 </body>
+<script type="text/javascript" th:src="@{/news/js/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/news/js/bootstrap.js}"></script>
+<script type="text/javascript" th:src="@{/news/js/news.js}"></script>
+
 </html>
