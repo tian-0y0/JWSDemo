@@ -166,7 +166,7 @@
                         <ul th:each="news:${newsList}">
                             <li class="text-li">
                                 <span></span>
-                                <a href="#">
+                                <a th:href="@{/user/newsDetail/{id}(id=${news.id})}">
                                     <div class="height-light">
                                         【官方新闻】
                                     </div>

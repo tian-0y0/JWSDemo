@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -25,6 +27,14 @@ public class NewsController {
         List<News> newsList =  newsService.newsList();
         model.addAttribute("newsList",newsList);
         return "user/news/newsList";
+    }
+
+    @GetMapping("/newsDetail/{id}")
+    @ResponseBody
+    public News newsDetail(@PathVariable("id") int id, Model model) {
+        News news = newsService.newsDetail(id);
+        model.addAttribute("news", news);
+        return news;
     }
 
 
