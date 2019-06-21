@@ -16,6 +16,9 @@ public class MyHandlerInterceptorConfig extends WebMvcConfigurerAdapter {
         addInterceptor.addPathPatterns("/admin/userList");
         addInterceptor.addPathPatterns("/admin/userDetail/{id}");
         addInterceptor.addPathPatterns("/admin/userDelete/{id}");
+        addInterceptor.addPathPatterns("/admin/newsList");
+        addInterceptor.addPathPatterns("/admin/toAddNews");
+        addInterceptor.addPathPatterns("/admin/doAddNews");
         addInterceptor.excludePathPatterns("/admin/toRegister");
         addInterceptor.excludePathPatterns("/admin/toLogin");
         super.addInterceptors(registry);

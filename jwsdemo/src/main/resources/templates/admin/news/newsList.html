@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>新闻列表</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.css}">
 </head>
 <body>
-
+<div>
+    <a class="btn btn-success btn-sm" th:href="@{/admin/toAddNews}">增加</a>
+    <table class="table table-hover" style="text-align: center">
+        <tr>
+            <td>ID</td>
+            <td>标题</td>
+            <td>时间</td>
+            <td>简介</td>
+            <td>操作</td>
+        </tr>
+        <tr th:each="news:${newsList}">
+            <td><span th:text="${news.id}"></span></td>
+            <td><span th:text="${news.title}"></span></td>
+            <td><span th:text="${news.time}"></span></td>
+            <td><span th:text="${news.breif}"></span></td>
+            <td>
+                <a th:href="@{/admin/newsDetail/{id}(id=${news.id})}">详情</a> | <a th:href="@{/admin/toUpdateNews/{id}(id=${news.id})}">修改</a> |<a th:href="@{/admin/deleteNews/{id}(id=${news.id})}" onclick="return del();">删除</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    function del() {
+        if(confirm('确认要删除？'))
+        {
+            return true;
+        }
+        return false;
+    }
+</script>
 </body>
 </html>

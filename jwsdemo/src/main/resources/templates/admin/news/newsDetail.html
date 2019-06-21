@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.css}">
 </head>
 <body>
+<div>
+    <table class="table table-hover" style="text-align: center">
 
+        <tr>
+            <td>ID</td>
+            <td><span th:text="${news.id}"></span></td>
+        </tr>
+        <tr>
+            <td>标题</td>
+            <td><span th:text="${news.title}"></span></td>
+        </tr>
+        <tr>
+            <td>作者</td>
+            <td><span th:text="${news.author}"></span></td>
+        </tr>
+        <tr>
+            <td>time</td>
+            <td><span th:text="${news.time}"></span></td>
+        </tr>
+        <tr>
+            <td>阅读量</td>
+            <td><span th:text="${news.number}"></span></td>
+        </tr>
+        <tr>
+            <td>简介</td>
+            <td><span th:text="${news.breif}"></span></td>
+        </tr>
+        <tr>
+            <td>内容</td>
+            <td><span th:text="${news.content}"></span></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

@@ -6,25 +6,25 @@ import java.util.List;
 public class NewsExample {
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     protected String orderByClause;
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     protected boolean distinct;
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     protected List<Criteria> oredCriteria;
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public NewsExample() {
         oredCriteria = new ArrayList<Criteria>();
@@ -32,7 +32,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void setOrderByClause(String orderByClause) {
         this.orderByClause = orderByClause;
@@ -40,7 +40,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public String getOrderByClause() {
         return orderByClause;
@@ -48,7 +48,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void setDistinct(boolean distinct) {
         this.distinct = distinct;
@@ -56,7 +56,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public boolean isDistinct() {
         return distinct;
@@ -64,7 +64,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public List<Criteria> getOredCriteria() {
         return oredCriteria;
@@ -72,7 +72,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void or(Criteria criteria) {
         oredCriteria.add(criteria);
@@ -80,7 +80,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public Criteria or() {
         Criteria criteria = createCriteriaInternal();
@@ -90,7 +90,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public NewsExample orderBy(String orderByClause) {
         this.setOrderByClause(orderByClause);
@@ -99,7 +99,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public NewsExample orderBy(String ... orderByClauses) {
         StringBuffer sb = new StringBuffer();
@@ -115,7 +115,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public Criteria createCriteria() {
         Criteria criteria = createCriteriaInternal();
@@ -127,7 +127,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     protected Criteria createCriteriaInternal() {
         Criteria criteria = new Criteria(this);
@@ -136,7 +136,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void clear() {
         oredCriteria.clear();
@@ -146,7 +146,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public static Criteria newAndCreateCriteria() {
         NewsExample example = new NewsExample();
@@ -155,7 +155,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
@@ -681,18 +681,18 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated do_not_delete_during_merge Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated do_not_delete_during_merge Fri Jun 21 14:56:29 CST 2019
      */
     public static class Criteria extends GeneratedCriteria {
         /**
          *
-         * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+         * @mbg.generated Fri Jun 21 14:56:29 CST 2019
          */
         private NewsExample example;
 
         /**
          *
-         * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+         * @mbg.generated Fri Jun 21 14:56:29 CST 2019
          */
         protected Criteria(NewsExample example) {
             super();
@@ -701,7 +701,7 @@ public class NewsExample {
 
         /**
          *
-         * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+         * @mbg.generated Fri Jun 21 14:56:29 CST 2019
          */
         public Criteria andLogicalDeleted(boolean deleted) {
             return deleted ? andIs_deleteEqualTo(News.DELETED) : andIs_deleteNotEqualTo(News.DELETED);
@@ -709,7 +709,7 @@ public class NewsExample {
 
         /**
          *
-         * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+         * @mbg.generated Fri Jun 21 14:56:29 CST 2019
          */
         public NewsExample example() {
             return this.example;
@@ -717,7 +717,7 @@ public class NewsExample {
 
         /**
          *
-         * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+         * @mbg.generated Fri Jun 21 14:56:29 CST 2019
          */
         public Criteria andIf(boolean ifAdd, ICriteriaAdd add) {
             if (ifAdd) {
@@ -729,7 +729,7 @@ public class NewsExample {
         public interface ICriteriaAdd {
             /**
              *
-             * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+             * @mbg.generated Fri Jun 21 14:56:29 CST 2019
              */
             Criteria add(Criteria add);
         }
@@ -737,7 +737,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public static class Criterion {
         private String condition;

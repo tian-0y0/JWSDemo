@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>新闻添加</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.css}">
 </head>
 <body>
+<div>
+    <form action="/admin/doAddNews" method="post" id="myForm">
+        标题：<input type="text" class="form-control" name="title" id="title" placeholder="标题"><br>
+        作者：<input type="text" class="form-control" name="author" id="author" placeholder="作者"><br>
+        时间：<input type="text" class="form-control" name="time" id="time" placeholder="发布时间"><br>
+        简介：<input type="text" class="form-control" name="brief" id="brief" placeholder="简介"><br>
+        内容：<input type="text" class="form-control" name="content" id="content" placeholder="内容"><br>
+        <input type="submit" class="btn btn-sm btn-info" value="添加">
+    </form>
+</div>
 
 </body>
 </html>

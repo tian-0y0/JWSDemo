@@ -12,75 +12,75 @@ import java.io.Serializable;
 public class News implements Serializable {
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public static final Integer NOT_DELETED = 0;
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public static final Integer DELETED = 1;
 
     /**
      *
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     private Integer id;
 
     /**
      *
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     private String title;
 
     /**
      *
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     private String time;
 
     /**
      *
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     private Integer number;
 
     /**
      *
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     private String breif;
 
     /**
      *
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     private String author;
 
     /**
      *
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     private Integer is_delete;
 
     /**
      *
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     private String content;
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     private static final long serialVersionUID = 1L;
 
@@ -89,7 +89,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.id
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public Integer getId() {
         return id;
@@ -97,7 +97,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public News withId(Integer id) {
         this.setId(id);
@@ -109,7 +109,7 @@ public class News implements Serializable {
      *
      * @param id the value for demo..news.id
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void setId(Integer id) {
         this.id = id;
@@ -120,7 +120,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.title
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public String getTitle() {
         return title;
@@ -128,7 +128,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public News withTitle(String title) {
         this.setTitle(title);
@@ -140,7 +140,7 @@ public class News implements Serializable {
      *
      * @param title the value for demo..news.title
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void setTitle(String title) {
         this.title = title;
@@ -151,7 +151,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.time
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public String getTime() {
         return time;
@@ -159,7 +159,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public News withTime(String time) {
         this.setTime(time);
@@ -171,7 +171,7 @@ public class News implements Serializable {
      *
      * @param time the value for demo..news.time
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void setTime(String time) {
         this.time = time;
@@ -182,7 +182,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.number
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public Integer getNumber() {
         return number;
@@ -190,7 +190,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public News withNumber(Integer number) {
         this.setNumber(number);
@@ -202,7 +202,7 @@ public class News implements Serializable {
      *
      * @param number the value for demo..news.number
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void setNumber(Integer number) {
         this.number = number;
@@ -213,7 +213,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.breif
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public String getBreif() {
         return breif;
@@ -221,7 +221,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public News withBreif(String breif) {
         this.setBreif(breif);
@@ -233,7 +233,7 @@ public class News implements Serializable {
      *
      * @param breif the value for demo..news.breif
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void setBreif(String breif) {
         this.breif = breif;
@@ -244,7 +244,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.author
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public String getAuthor() {
         return author;
@@ -252,7 +252,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public News withAuthor(String author) {
         this.setAuthor(author);
@@ -264,7 +264,7 @@ public class News implements Serializable {
      *
      * @param author the value for demo..news.author
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void setAuthor(String author) {
         this.author = author;
@@ -275,7 +275,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.is_delete
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public Integer getIs_delete() {
         return is_delete;
@@ -283,7 +283,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public News withIs_delete(Integer is_delete) {
         this.setIs_delete(is_delete);
@@ -295,7 +295,7 @@ public class News implements Serializable {
      *
      * @param is_delete the value for demo..news.is_delete
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void setIs_delete(Integer is_delete) {
         this.is_delete = is_delete;
@@ -306,7 +306,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.content
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public String getContent() {
         return content;
@@ -314,7 +314,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public News withContent(String content) {
         this.setContent(content);
@@ -326,7 +326,7 @@ public class News implements Serializable {
      *
      * @param content the value for demo..news.content
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void setContent(String content) {
         this.content = content;
@@ -334,7 +334,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     @Override
     public String toString() {
@@ -356,7 +356,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     public void andLogicalDeleted(boolean deleted) {
         setIs_delete(deleted ? DELETED : NOT_DELETED);
@@ -364,7 +364,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     @Override
     public boolean equals(Object that) {
@@ -390,7 +390,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Thu Jun 20 10:54:04 CST 2019
+     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
      */
     @Override
     public int hashCode() {
