@@ -67,4 +67,11 @@ public class AdminController
         model.addAttribute("admin", example);
         return "admin/index";
     }
+
+    @GetMapping("index")
+    public String main()
+    {
+        return "admin/index";
+    }
+
 }
