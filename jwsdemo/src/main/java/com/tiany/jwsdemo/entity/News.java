@@ -1,6 +1,8 @@
 package com.tiany.jwsdemo.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created By MBG-GUI-EXTENSION https://github.com/spawpaw/mybatis-generator-gui-extension
@@ -12,75 +14,75 @@ import java.io.Serializable;
 public class News implements Serializable {
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public static final Integer NOT_DELETED = 0;
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public static final Integer DELETED = 1;
 
     /**
      *
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     private Integer id;
 
     /**
      *
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     private String title;
 
     /**
      *
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     private String time;
 
     /**
      *
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     private Integer number;
 
     /**
      *
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     private String breif;
 
     /**
      *
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     private String author;
 
     /**
      *
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     private Integer is_delete;
 
     /**
      *
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     private String content;
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     private static final long serialVersionUID = 1L;
 
@@ -89,7 +91,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.id
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public Integer getId() {
         return id;
@@ -97,7 +99,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public News withId(Integer id) {
         this.setId(id);
@@ -109,7 +111,7 @@ public class News implements Serializable {
      *
      * @param id the value for demo..news.id
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void setId(Integer id) {
         this.id = id;
@@ -120,7 +122,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.title
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public String getTitle() {
         return title;
@@ -128,7 +130,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public News withTitle(String title) {
         this.setTitle(title);
@@ -140,7 +142,7 @@ public class News implements Serializable {
      *
      * @param title the value for demo..news.title
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void setTitle(String title) {
         this.title = title;
@@ -151,7 +153,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.time
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public String getTime() {
         return time;
@@ -159,7 +161,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public News withTime(String time) {
         this.setTime(time);
@@ -171,7 +173,7 @@ public class News implements Serializable {
      *
      * @param time the value for demo..news.time
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void setTime(String time) {
         this.time = time;
@@ -182,7 +184,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.number
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public Integer getNumber() {
         return number;
@@ -190,7 +192,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public News withNumber(Integer number) {
         this.setNumber(number);
@@ -202,7 +204,7 @@ public class News implements Serializable {
      *
      * @param number the value for demo..news.number
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void setNumber(Integer number) {
         this.number = number;
@@ -213,7 +215,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.breif
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public String getBreif() {
         return breif;
@@ -221,7 +223,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public News withBreif(String breif) {
         this.setBreif(breif);
@@ -233,7 +235,7 @@ public class News implements Serializable {
      *
      * @param breif the value for demo..news.breif
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void setBreif(String breif) {
         this.breif = breif;
@@ -244,7 +246,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.author
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public String getAuthor() {
         return author;
@@ -252,7 +254,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public News withAuthor(String author) {
         this.setAuthor(author);
@@ -264,7 +266,7 @@ public class News implements Serializable {
      *
      * @param author the value for demo..news.author
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void setAuthor(String author) {
         this.author = author;
@@ -275,7 +277,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.is_delete
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public Integer getIs_delete() {
         return is_delete;
@@ -283,7 +285,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public News withIs_delete(Integer is_delete) {
         this.setIs_delete(is_delete);
@@ -295,7 +297,7 @@ public class News implements Serializable {
      *
      * @param is_delete the value for demo..news.is_delete
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void setIs_delete(Integer is_delete) {
         this.is_delete = is_delete;
@@ -306,7 +308,7 @@ public class News implements Serializable {
      *
      * @return the value of demo..news.content
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public String getContent() {
         return content;
@@ -314,7 +316,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public News withContent(String content) {
         this.setContent(content);
@@ -326,7 +328,7 @@ public class News implements Serializable {
      *
      * @param content the value for demo..news.content
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void setContent(String content) {
         this.content = content;
@@ -334,7 +336,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     @Override
     public String toString() {
@@ -356,7 +358,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void andLogicalDeleted(boolean deleted) {
         setIs_delete(deleted ? DELETED : NOT_DELETED);
@@ -364,7 +366,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     @Override
     public boolean equals(Object that) {
@@ -390,7 +392,7 @@ public class News implements Serializable {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     @Override
     public int hashCode() {
@@ -405,5 +407,139 @@ public class News implements Serializable {
         result = prime * result + ((getIs_delete() == null) ? 0 : getIs_delete().hashCode());
         result = prime * result + ((getContent() == null) ? 0 : getContent().hashCode());
         return result;
+    }
+
+    /**
+     *
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+     */
+    public enum Column {
+        id("id", "id", "INTEGER", false),
+        title("title", "title", "VARCHAR", false),
+        time("time", "time", "VARCHAR", false),
+        number("number", "number", "INTEGER", false),
+        breif("breif", "breif", "VARCHAR", false),
+        author("author", "author", "VARCHAR", false),
+        is_delete("is_delete", "is_delete", "INTEGER", false),
+        content("content", "content", "LONGVARCHAR", false);
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        private static final String BEGINNING_DELIMITER = "\"";
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        private static final String ENDING_DELIMITER = "\"";
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        private final String column;
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        private final boolean isColumnNameDelimited;
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        private final String javaProperty;
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        private final String jdbcType;
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public String value() {
+            return this.column;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public String getValue() {
+            return this.column;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public String getJavaProperty() {
+            return this.javaProperty;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public String getJdbcType() {
+            return this.jdbcType;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        Column(String column, String javaProperty, String jdbcType, boolean isColumnNameDelimited) {
+            this.column = column;
+            this.javaProperty = javaProperty;
+            this.jdbcType = jdbcType;
+            this.isColumnNameDelimited = isColumnNameDelimited;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public String desc() {
+            return this.getEscapedColumnName() + " DESC";
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public String asc() {
+            return this.getEscapedColumnName() + " ASC";
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public static Column[] excludes(Column ... excludes) {
+            ArrayList<Column> columns = new ArrayList<>(Arrays.asList(Column.values()));
+            if (excludes != null && excludes.length > 0) {
+                columns.removeAll(new ArrayList<>(Arrays.asList(excludes)));
+            }
+            return columns.toArray(new Column[]{});
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public String getEscapedColumnName() {
+            if (this.isColumnNameDelimited) {
+                return new StringBuilder().append(BEGINNING_DELIMITER).append(this.column).append(ENDING_DELIMITER).toString();
+            } else {
+                return this.column;
+            }
+        }
     }
 }

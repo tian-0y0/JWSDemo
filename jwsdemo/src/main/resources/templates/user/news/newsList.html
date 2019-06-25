@@ -166,7 +166,7 @@
                         <ul th:each="news:${newsList}">
                             <li class="text-li">
                                 <span></span>
-                                <a th:href="@{/user/newsDetail/{id}(id=${news.id})}">
+                                <a th:href="@{/user/newsDetail/{id}(id=${news.id})}" th:onclick="|count(${news.id})|">
                                     <div class="height-light">
                                         【官方新闻】
                                     </div>
@@ -398,5 +398,11 @@
 <script type="text/javascript" th:src="@{/news/js/jquery-3.3.1.min.js}"></script>
 <script type="text/javascript" th:src="@{/news/js/bootstrap.js}"></script>
 <script type="text/javascript" th:src="@{/news/js/news.js}"></script>
-
+<script>
+    function count(id) {
+        $.post({
+            url: '/user/news/count/'+id
+        });
+    }
+</script>
 </html>

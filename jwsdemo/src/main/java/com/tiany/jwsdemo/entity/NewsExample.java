@@ -6,25 +6,29 @@ import java.util.List;
 public class NewsExample {
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     protected String orderByClause;
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     protected boolean distinct;
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     protected List<Criteria> oredCriteria;
 
+    private Integer limit;
+
+    private Integer offset;
+
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public NewsExample() {
         oredCriteria = new ArrayList<Criteria>();
@@ -32,7 +36,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void setOrderByClause(String orderByClause) {
         this.orderByClause = orderByClause;
@@ -40,7 +44,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public String getOrderByClause() {
         return orderByClause;
@@ -48,7 +52,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void setDistinct(boolean distinct) {
         this.distinct = distinct;
@@ -56,7 +60,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public boolean isDistinct() {
         return distinct;
@@ -64,7 +68,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public List<Criteria> getOredCriteria() {
         return oredCriteria;
@@ -72,7 +76,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void or(Criteria criteria) {
         oredCriteria.add(criteria);
@@ -80,7 +84,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public Criteria or() {
         Criteria criteria = createCriteriaInternal();
@@ -90,7 +94,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public NewsExample orderBy(String orderByClause) {
         this.setOrderByClause(orderByClause);
@@ -99,7 +103,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public NewsExample orderBy(String ... orderByClauses) {
         StringBuffer sb = new StringBuffer();
@@ -115,7 +119,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public Criteria createCriteria() {
         Criteria criteria = createCriteriaInternal();
@@ -127,7 +131,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     protected Criteria createCriteriaInternal() {
         Criteria criteria = new Criteria(this);
@@ -136,7 +140,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public void clear() {
         oredCriteria.clear();
@@ -144,9 +148,32 @@ public class NewsExample {
         distinct = false;
     }
 
+    public void setLimit(Integer limit) {
+        this.limit = limit;
+    }
+
+    public Integer getLimit() {
+        return limit;
+    }
+
+    public void setOffset(Integer offset) {
+        this.offset = offset;
+    }
+
+    public Integer getOffset() {
+        return offset;
+    }
+
+    public void setPageInfo(Integer currentPage, Integer pageSize) {
+        if(pageSize<1) throw new IllegalArgumentException("页大小不能小于1！");
+        this.limit=pageSize;
+        if(currentPage<1) throw new IllegalArgumentException("页数不能小于1！");
+        this.offset=(currentPage-1)*pageSize;
+    }
+
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public static Criteria newAndCreateCriteria() {
         NewsExample example = new NewsExample();
@@ -155,7 +182,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
@@ -213,8 +240,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIdEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("id = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andIdNotEqualTo(Integer value) {
             addCriterion("id <>", value, "id");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIdNotEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("id <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -223,8 +268,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIdGreaterThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("id > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andIdGreaterThanOrEqualTo(Integer value) {
             addCriterion("id >=", value, "id");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIdGreaterThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("id >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -233,8 +296,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIdLessThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("id < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andIdLessThanOrEqualTo(Integer value) {
             addCriterion("id <=", value, "id");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIdLessThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("id <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -273,8 +354,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTitleEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("title = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andTitleNotEqualTo(String value) {
             addCriterion("title <>", value, "title");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTitleNotEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("title <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -283,8 +382,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTitleGreaterThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("title > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andTitleGreaterThanOrEqualTo(String value) {
             addCriterion("title >=", value, "title");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTitleGreaterThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("title >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -293,8 +410,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTitleLessThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("title < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andTitleLessThanOrEqualTo(String value) {
             addCriterion("title <=", value, "title");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTitleLessThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("title <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -343,8 +478,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTimeEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("time = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andTimeNotEqualTo(String value) {
             addCriterion("time <>", value, "time");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTimeNotEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("time <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -353,8 +506,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTimeGreaterThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("time > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andTimeGreaterThanOrEqualTo(String value) {
             addCriterion("time >=", value, "time");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTimeGreaterThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("time >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -363,8 +534,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTimeLessThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("time < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andTimeLessThanOrEqualTo(String value) {
             addCriterion("time <=", value, "time");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andTimeLessThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("time <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -413,8 +602,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andNumberEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("number = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andNumberNotEqualTo(Integer value) {
             addCriterion("number <>", value, "number");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andNumberNotEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("number <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -423,8 +630,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andNumberGreaterThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("number > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andNumberGreaterThanOrEqualTo(Integer value) {
             addCriterion("number >=", value, "number");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andNumberGreaterThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("number >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -433,8 +658,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andNumberLessThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("number < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andNumberLessThanOrEqualTo(Integer value) {
             addCriterion("number <=", value, "number");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andNumberLessThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("number <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -473,8 +716,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andBreifEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("breif = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andBreifNotEqualTo(String value) {
             addCriterion("breif <>", value, "breif");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andBreifNotEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("breif <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -483,8 +744,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andBreifGreaterThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("breif > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andBreifGreaterThanOrEqualTo(String value) {
             addCriterion("breif >=", value, "breif");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andBreifGreaterThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("breif >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -493,8 +772,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andBreifLessThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("breif < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andBreifLessThanOrEqualTo(String value) {
             addCriterion("breif <=", value, "breif");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andBreifLessThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("breif <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -543,8 +840,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andAuthorEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("author = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andAuthorNotEqualTo(String value) {
             addCriterion("author <>", value, "author");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andAuthorNotEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("author <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -553,8 +868,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andAuthorGreaterThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("author > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andAuthorGreaterThanOrEqualTo(String value) {
             addCriterion("author >=", value, "author");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andAuthorGreaterThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("author >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -563,8 +896,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andAuthorLessThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("author < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andAuthorLessThanOrEqualTo(String value) {
             addCriterion("author <=", value, "author");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andAuthorLessThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("author <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -613,8 +964,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIs_deleteEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("is_delete = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andIs_deleteNotEqualTo(Integer value) {
             addCriterion("is_delete <>", value, "is_delete");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIs_deleteNotEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("is_delete <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -623,8 +992,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIs_deleteGreaterThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("is_delete > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andIs_deleteGreaterThanOrEqualTo(Integer value) {
             addCriterion("is_delete >=", value, "is_delete");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIs_deleteGreaterThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("is_delete >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -633,8 +1020,26 @@ public class NewsExample {
             return (Criteria) this;
         }
 
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIs_deleteLessThanColumn(News.Column column) {
+            addCriterion(new StringBuilder("is_delete < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
         public Criteria andIs_deleteLessThanOrEqualTo(Integer value) {
             addCriterion("is_delete <=", value, "is_delete");
+            return (Criteria) this;
+        }
+
+        /**
+         *
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+         */
+        public Criteria andIs_deleteLessThanOrEqualToColumn(News.Column column) {
+            addCriterion(new StringBuilder("is_delete <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
@@ -681,18 +1086,18 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated do_not_delete_during_merge Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated do_not_delete_during_merge Tue Jun 25 16:20:16 CST 2019
      */
     public static class Criteria extends GeneratedCriteria {
         /**
          *
-         * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
          */
         private NewsExample example;
 
         /**
          *
-         * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
          */
         protected Criteria(NewsExample example) {
             super();
@@ -701,7 +1106,7 @@ public class NewsExample {
 
         /**
          *
-         * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
          */
         public Criteria andLogicalDeleted(boolean deleted) {
             return deleted ? andIs_deleteEqualTo(News.DELETED) : andIs_deleteNotEqualTo(News.DELETED);
@@ -709,7 +1114,7 @@ public class NewsExample {
 
         /**
          *
-         * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
          */
         public NewsExample example() {
             return this.example;
@@ -717,7 +1122,7 @@ public class NewsExample {
 
         /**
          *
-         * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+         * @mbg.generated Tue Jun 25 16:20:16 CST 2019
          */
         public Criteria andIf(boolean ifAdd, ICriteriaAdd add) {
             if (ifAdd) {
@@ -729,7 +1134,7 @@ public class NewsExample {
         public interface ICriteriaAdd {
             /**
              *
-             * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+             * @mbg.generated Tue Jun 25 16:20:16 CST 2019
              */
             Criteria add(Criteria add);
         }
@@ -737,7 +1142,7 @@ public class NewsExample {
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     public static class Criterion {
         private String condition;

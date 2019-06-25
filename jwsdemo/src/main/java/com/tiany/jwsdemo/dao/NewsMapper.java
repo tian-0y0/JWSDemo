@@ -10,103 +10,115 @@ import org.apache.ibatis.annotations.Param;
 public interface NewsMapper {
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     long countByExample(NewsExample example);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int deleteByExample(NewsExample example);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int deleteByPrimaryKey(Integer id);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int insert(News record);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int insertSelective(News record);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     List<News> selectByExampleWithBLOBs(NewsExample example);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     List<News> selectByExample(NewsExample example);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     News selectByPrimaryKey(Integer id);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     News selectByPrimaryKeyWithLogicalDelete(@Param("id") Integer id, @Param("andLogicalDeleted") boolean andLogicalDeleted);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int updateByExampleSelective(@Param("record") News record, @Param("example") NewsExample example);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int updateByExampleWithBLOBs(@Param("record") News record, @Param("example") NewsExample example);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int updateByExample(@Param("record") News record, @Param("example") NewsExample example);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int updateByPrimaryKeySelective(News record);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int updateByPrimaryKeyWithBLOBs(News record);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int updateByPrimaryKey(News record);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int logicalDeleteByExample(@Param("example") NewsExample example);
 
     /**
      *
-     * @mbg.generated Fri Jun 21 14:56:29 CST 2019
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
      */
     int logicalDeleteByPrimaryKey(Integer id);
+
+    /**
+     *
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+     */
+    int batchInsert(@Param("list") List<News> list);
+
+    /**
+     *
+     * @mbg.generated Tue Jun 25 16:20:16 CST 2019
+     */
+    int batchInsertSelective(@Param("list") List<News> list, @Param("selective") News.Column ... selective);
 }

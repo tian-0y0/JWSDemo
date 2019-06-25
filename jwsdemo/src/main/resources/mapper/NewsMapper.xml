@@ -3,7 +3,7 @@
 <mapper namespace="com.tiany.jwsdemo.dao.NewsMapper">
   <resultMap id="BaseResultMap" type="com.tiany.jwsdemo.entity.News">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
@@ -15,13 +15,13 @@
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.tiany.jwsdemo.entity.News">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -53,7 +53,7 @@
   </sql>
   <sql id="Update_By_Example_Where_Clause">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     <where>
       <foreach collection="example.oredCriteria" item="criteria" separator="or">
@@ -85,19 +85,19 @@
   </sql>
   <sql id="Base_Column_List">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     id, title, time, number, breif, author, is_delete
   </sql>
   <sql id="Blob_Column_List">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     content
   </sql>
   <select id="selectByExampleWithBLOBs" parameterType="com.tiany.jwsdemo.entity.NewsExample" resultMap="ResultMapWithBLOBs">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     select
     <if test="distinct">
@@ -116,7 +116,7 @@
   </select>
   <select id="selectByExample" parameterType="com.tiany.jwsdemo.entity.NewsExample" resultMap="BaseResultMap">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     select
     <if test="distinct">
@@ -130,10 +130,18 @@
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     select 
     <include refid="Base_Column_List" />
@@ -144,10 +152,10 @@
   </select>
   <select id="selectByPrimaryKeyWithLogicalDelete" parameterType="map" resultMap="ResultMapWithBLOBs">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     select 
     <include refid="Base_Column_List" />
@@ -167,14 +175,14 @@
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     delete from news
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.tiany.jwsdemo.entity.NewsExample">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     delete from news
     <if test="_parameter != null">
@@ -183,7 +191,7 @@
   </delete>
   <insert id="insert" parameterType="com.tiany.jwsdemo.entity.News">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
@@ -197,7 +205,7 @@
   </insert>
   <insert id="insertSelective" parameterType="com.tiany.jwsdemo.entity.News">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
@@ -252,7 +260,7 @@
   </insert>
   <select id="countByExample" parameterType="com.tiany.jwsdemo.entity.NewsExample" resultType="java.lang.Long">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     select count(*) from news
     <if test="_parameter != null">
@@ -261,7 +269,7 @@
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     update news
     <set>
@@ -296,7 +304,7 @@
   </update>
   <update id="updateByExampleWithBLOBs" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     update news
     set id = #{record.id,jdbcType=INTEGER},
@@ -313,7 +321,7 @@
   </update>
   <update id="updateByExample" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     update news
     set id = #{record.id,jdbcType=INTEGER},
@@ -329,7 +337,7 @@
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.tiany.jwsdemo.entity.News">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     update news
     <set>
@@ -359,7 +367,7 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tiany.jwsdemo.entity.News">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     update news
     set title = #{title,jdbcType=VARCHAR},
@@ -373,7 +381,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.tiany.jwsdemo.entity.News">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     update news
     set title = #{title,jdbcType=VARCHAR},
@@ -386,7 +394,7 @@
   </update>
   <update id="logicalDeleteByExample" parameterType="map">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     update news set is_delete = 1
     <if test="_parameter != null">
@@ -395,9 +403,60 @@
   </update>
   <update id="logicalDeleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
-      WARNING - @mbg.generated  This element was generated on Fri Jun 21 14:56:29 CST 2019. by MyBatis Generator, do not modify.
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
     -->
     update news set is_delete = 1
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <insert id="batchInsert" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    insert into news
+    (title, time, number, breif, author, is_delete, content)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.title,jdbcType=VARCHAR}, #{item.time,jdbcType=VARCHAR}, #{item.number,jdbcType=INTEGER}, 
+        #{item.breif,jdbcType=VARCHAR}, #{item.author,jdbcType=VARCHAR}, #{item.is_delete,jdbcType=INTEGER}, 
+        #{item.content,jdbcType=LONGVARCHAR})
+    </foreach>
+  </insert>
+  <insert id="batchInsertSelective" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
+    <!--
+      WARNING - @mbg.generated  This element was generated on Tue Jun 25 16:20:16 CST 2019. by MyBatis Generator, do not modify.
+    -->
+    insert into news (
+    <foreach collection="selective" item="column" separator=",">
+      ${column.escapedColumnName}
+    </foreach>
+    )
+    values
+    <foreach collection="list" item="item" separator=",">
+      (
+      <foreach collection="selective" item="column" separator=",">
+        <if test="'title'.toString() == column.value">
+          #{item.title,jdbcType=VARCHAR}
+        </if>
+        <if test="'time'.toString() == column.value">
+          #{item.time,jdbcType=VARCHAR}
+        </if>
+        <if test="'number'.toString() == column.value">
+          #{item.number,jdbcType=INTEGER}
+        </if>
+        <if test="'breif'.toString() == column.value">
+          #{item.breif,jdbcType=VARCHAR}
+        </if>
+        <if test="'author'.toString() == column.value">
+          #{item.author,jdbcType=VARCHAR}
+        </if>
+        <if test="'is_delete'.toString() == column.value">
+          #{item.is_delete,jdbcType=INTEGER}
+        </if>
+        <if test="'content'.toString() == column.value">
+          #{item.content,jdbcType=LONGVARCHAR}
+        </if>
+      </foreach>
+      )
+    </foreach>
+  </insert>
 </mapper>

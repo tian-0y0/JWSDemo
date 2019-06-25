@@ -1,14 +1,13 @@
 package com.tiany.jwsdemo.controller.admin;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.tiany.jwsdemo.entity.News;
 import com.tiany.jwsdemo.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -23,8 +22,12 @@ public class NewsManagerController {
     @GetMapping("/newsList")
     public String userList(Model model) {
         List<News> newsList = newsService.newsList();
+        PageHelper.startPage(2,2);
+        PageInfo<News> newsPageInfo = new PageInfo<>(newsList);
         model.addAttribute("newsList", newsList);
+        model.addAttribute("newsPageInfo",newsPageInfo);
         return "admin/news/newsList";
+        //return newsPageInfo;
     }
 
 
