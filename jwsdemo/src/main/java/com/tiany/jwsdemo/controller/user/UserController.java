@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * 用户登录注册控制器
@@ -56,14 +57,16 @@ public class UserController {
     @PostMapping("/doLogin")
     public String doLogin(HttpServletRequest request, Model model, HttpSession session)
     {
-        UserExample example = new UserExample();
-
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        example = userService.login(email,password);
-        session.setAttribute("userSession", example);
-        model.addAttribute("user",example);
+        User user = userService.login(email,password);
+        session.setAttribute("userSession", user);
+
+//        User user1 = (User) session.getAttribute("userSession");
+//        System.out.println(user1.getId());
+
+        model.addAttribute("user",user);
 
         return "user/index";
 

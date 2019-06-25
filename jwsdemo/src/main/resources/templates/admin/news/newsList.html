@@ -209,6 +209,39 @@ desired effect
                         </td>
                     </tr>
                 </table>
+                <!--显示分页信息-->
+                <div class="modal-footer no-margin-top">
+                    <div class="col-md-6">
+                        当前第 [[${newsPageInfo.pageNum}]]页,共 [[${newsPageInfo.pages}]] 页.一共 [[${newsPageInfo.total}]] 条记录
+                    </div>
+
+                    <ul class="pagination pull-right no-margin">
+                        <li th:if="${newsPageInfo.hasPreviousPage}">
+                            <a th:href="'admin/newsList?pageNum=1'">首页</a>
+                        </li>
+
+                        <li class="prev" th:if="${newsPageInfo.hasPreviousPage}">
+                            <a th:href="'admin/newsList?pageNum='+${newsPageInfo.prePage}">
+                                <i class="ace-icon fa fa-angle-double-left"></i>
+                            </a>
+                        </li>
+                        <!--遍历条数-->
+                        <li th:each="nav:${newsPageInfo.navigatepageNums}">
+                            <a th:href="'admin/newsList?pageNum='+${nav}" th:text="${nav}" th:if="${nav != newsPageInfo.pageNum}"></a>
+                            <span style="font-weight: bold;background: #6faed9;" th:if="${nav == newsPageInfo.pageNum}" th:text="${nav}" ></span>
+                        </li>
+
+                        <li class="next" th:if="${newsPageInfo.hasNextPage}">
+                            <a th:href="'admin/newsList?pageNum='+${newsPageInfo.nextPage}">
+                                <i class="ace-icon fa fa-angle-double-right"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a th:href="'admin/newsList?pageNum='+${newsPageInfo.pages}">尾页</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <script type="text/javascript">
                 function del() {

@@ -39,13 +39,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserExample login(String email, String password) {
+    public User login(String email, String password) {
         UserExample example = new UserExample();
         example.createCriteria().andEmailEqualTo(email);
         example.createCriteria().andPasswordEqualTo(password);
 
-        userMapper.selectByExample(example);
-        return example;
+        List<User> list =  userMapper.selectByExample(example);
+        if (list != null && !list.isEmpty()) {
+            return list.get(0);
+        }
+        return null;
+
     }
 
     public boolean isExistEmail(String email) {

@@ -20,12 +20,29 @@ public class NewsManagerController {
     private NewsService newsService;
 
     @GetMapping("/newsList")
-    public String userList(Model model) {
+    public String userList(Model model,
+                            @RequestParam(required = false,defaultValue="1",value="pageNum")Integer pageNum,
+                            @RequestParam(defaultValue="2",value="pageSize")Integer pageSize)
+    {
+
+        if(pageNum == null){
+            pageNum = 1;   //设置默认当前页
+        }
+        if(pageNum <= 0){
+            pageNum = 1;
+        }
+        if(pageSize == null){
+            pageSize = 2;    //设置默认每页显示的数据数
+        }
+        System.out.println("当前页是："+pageNum+"显示条数是："+pageSize);
+        PageHelper.startPage(pageNum,pageSize);
         List<News> newsList = newsService.newsList();
-        PageHelper.startPage(2,2);
-        PageInfo<News> newsPageInfo = new PageInfo<>(newsList);
+        PageInfo<News> newsPageInfo = new PageInfo<>(newsList,pageSize);
         model.addAttribute("newsList", newsList);
         model.addAttribute("newsPageInfo",newsPageInfo);
+
+        PageHelper.clearPage(); //清理 ThreadLocal 存储的分页参数,保证线程安全
+
         return "admin/news/newsList";
         //return newsPageInfo;
     }
